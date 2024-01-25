@@ -1,5 +1,13 @@
-export default function Home() {
+import Content from "@/component/Content";
+import Footer from "@/component/Footer";
+import Header from "@/component/Header";
+
+export default function Home() {  
   return (
-   <div>Manage order coffee</div>
+    <>
+      <Header />
+      <Content />
+      <Footer />
+    </>
   )
 }
