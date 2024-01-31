@@ -3,6 +3,7 @@ import HeaderBackground from "../HeaderBackground";
 import { Badge } from "antd";
 import { CalendarOutlined } from '@ant-design/icons';
 import Link from 'next/link';
+import './header.scss';
 
 const Header = () => {
     return (
