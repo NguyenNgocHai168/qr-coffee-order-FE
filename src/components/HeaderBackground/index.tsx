@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 const HeaderBackground = () => {
     return (
@@ -19,22 +20,26 @@ const HeaderBackground = () => {
                                 Coffee house  Nguyen Ngoc Hai
                             </h2>
                             <h4 className="mb-6 text-xl font-semibold">Xin kính chào quý khách</h4>
-                            <button
-                                type="button"
-                                // className="me-2 rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                                className="me-2 bg-orange-300 hover:bg-orange-900 text-white font-bold px-7 px-4 rounded pb-[8px] pt-[10px] text-sm uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out"
-                                data-te-ripple-init
-                                data-te-ripple-color="light">
-                                View Menu
-                            </button>
-                            <button
-                                type="button"
-                                // className="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                                className="me-2 bg-orange-900 hover:bg-orange-300 text-white font-bold px-7 px-4 rounded pb-[8px] pt-[10px] text-sm uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out"
-                                data-te-ripple-init
-                                data-te-ripple-color="light">
-                                Book Table
-                            </button>
+                            <Link href="/">
+                                <button
+                                    type="button"
+                                    // className="me-2 rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                                    className="me-2 bg-orange-300 hover:bg-orange-900 text-white font-bold px-7 px-4 rounded pb-[8px] pt-[10px] text-sm uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out"
+                                    data-te-ripple-init
+                                    data-te-ripple-color="light">
+                                    View Menu
+                                </button>
+                            </Link>
+                            <Link href="/coffeeHouse-choose-table">
+                                <button
+                                    type="button"
+                                    // className="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                                    className="me-2 bg-orange-900 hover:bg-orange-300 text-white font-bold px-7 px-4 rounded pb-[8px] pt-[10px] text-sm uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out"
+                                    data-te-ripple-init
+                                    data-te-ripple-color="light">
+                                    Book Table
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

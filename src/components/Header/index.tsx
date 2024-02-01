@@ -14,6 +14,10 @@ const Header = () => {
                         <CalendarOutlined className='text-4xl bg-amber-500' />
                     </Badge>
                 </Link>
+                
+            </div>
+            <div className="fixed text-white z-10 left-0 p-6">
+                <Link href="/coffeeHouse-QR">QR Code</Link>
             </div>
             <HeaderBackground />
         </>
