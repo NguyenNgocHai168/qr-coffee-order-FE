@@ -22,41 +22,41 @@ const MenuOrder = () => {
             title: "Nước ép dâu tây 1",
             price: "35.000 VND",
             image: "Freshly_Brewed.jpg",
-            checkOrder: false
+            checkOrder: true
         },
         {
             id: 2,
             title: "Nước ép dâu tây 2",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
-            checkOrder: true
+            image: "High_Quality.jpg",
+            checkOrder: false
         },
         {
             id: 3,
             title: "Nước ép dâu tây 3",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
+            image: "coffe_sua_da.jpg",
             checkOrder: false
         },
         {
             id: 4,
             title: "Nước ép dâu tây 4",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
+            image: "High_Quality.jpg",
             checkOrder: false
         },
         {
             id: 5,
             title: "Nước ép dâu tây 5",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
+            image: "coffe_sua_da.jpg",
             checkOrder: false
         },
         {
             id: 6,
             title: "Nước ép dâu tây 6",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
+            image: "High_Quality.jpg",
             checkOrder: false
         },
         {
@@ -70,7 +70,7 @@ const MenuOrder = () => {
             id: 8,
             title: "Nước ép dâu tây 8",
             price: "35.000 VND",
-            image: "Freshly_Brewed.jpg",
+            image: "High_Quality.jpg",
             checkOrder: false
         },
     ])
