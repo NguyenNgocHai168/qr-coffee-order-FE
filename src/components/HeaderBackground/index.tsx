@@ -4,7 +4,7 @@ const HeaderBackground = () => {
     return (
         <>
             <div
-                className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
+                className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
                 style={{ backgroundImage: "url('/images/coffee_garden_house.jpg')", height: "100vh" }}>
                 <div
                     className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
