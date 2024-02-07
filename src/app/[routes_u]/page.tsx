@@ -2,18 +2,21 @@
 import ChooseTable from '@/components/ChooseTable'
 import OrderList from '@/components/OrderList'
 import QRCodeCoffee from '@/components/QRCodeCoffee'
+import TodoList from '@/components/TodoList'
 import { usePathname } from 'next/navigation'
 
 const OrderCoffeeRoutes = () => {
     const pathname = usePathname()
 
     switch (pathname) {
-        case '/order-list':
+        case '/Order-list':
             return <OrderList />
-        case '/coffeeHouse-QR':
+        case '/CoffeeHouse-QR':
             return <QRCodeCoffee />
-        case '/coffeeHouse-choose-table':
+        case '/CoffeeHouse-choose-table':
             return <ChooseTable />
+        case '/Todo-list':
+            return <TodoList />
         default:
             return <div className='container'>404 not found</div>
     }
