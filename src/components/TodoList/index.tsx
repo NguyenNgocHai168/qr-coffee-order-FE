@@ -1,9 +1,9 @@
 "use client";
-
-import { addTodo, removeTodo, toggleTodo } from "@/redux/features/todo-slice";
 import { AppDispatch, RootState } from "@/redux/features/store";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { addOrderCoffee } from "@/redux/features/coffeeOrder-slice";
+import { removeTodo, toggleTodo } from "@/redux/features/todo-slice";
 
 function TodoList() {
     const todoList = useSelector((state: RootState) => state.todoReducer.list);
@@ -12,7 +12,7 @@ function TodoList() {
 
     const handleSubmit = () => {
         dispatch(
-            addTodo({
+            addOrderCoffee({
                 id: Date.now(),
                 name: todo,
                 done: false,

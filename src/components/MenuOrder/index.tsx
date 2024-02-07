@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { Card } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '@/redux/features/store';
+import { addOrderCoffee, removeOrderCoffee } from '@/redux/features/coffeeOrder-slice';
 
 const { Meta } = Card;
 
@@ -75,14 +78,21 @@ const MenuOrder = () => {
         },
     ])
 
-    const handleAddOrder = (id: number) => {
-        let checkSelectedOrder = data.map((item:IMenuOrder) => {
-            if (item.id === id) {
+    const dispatch = useDispatch<AppDispatch>();
+
+    const handleAddOrder = async (value: any) => {
+        let checkSelectedOrder = data.map((item: IMenuOrder) => {
+            if (item.id === value.id) {
+                
                 let replaceCheck = !(item.checkOrder)
                 let newItem = {...item, checkOrder: replaceCheck}
+
                 if (replaceCheck) {
                     setOrderList([...orderList, newItem])
                 }
+
+                newItem.checkOrder ? dispatch(addOrderCoffee(newItem)) : dispatch(removeOrderCoffee(newItem.id))
+
                 return newItem
             }
             return item
@@ -94,7 +104,7 @@ const MenuOrder = () => {
         <>
             <div className="container m-auto px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4">
                 {data.map((item: any, index: number) => (
-                    <div key={index} className='w-auto' onClick={() => handleAddOrder(item.id)}>
+                    <div key={index} className='w-auto' onClick={() => handleAddOrder(item)}>
                         <Card
                             hoverable
                             cover={

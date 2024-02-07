@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit"
 import todoReducer from "./todo-slice"
+import orderCoffeeReducer from "./coffeeOrder-slice"
 
 export const store = configureStore({
     reducer: {
         todoReducer,
+        orderCoffeeReducer,
     },
 })
 
