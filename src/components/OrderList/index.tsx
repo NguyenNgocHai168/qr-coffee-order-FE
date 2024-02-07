@@ -80,25 +80,27 @@ const OrderList = () => {
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any) => 
-                        <Card
-                            style={{ padding: "10px" }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src={`/images/${item.image}`}
-                                />
-                            }
-                            actions={[
-                                <button>View</button>,
-                                <button>Edit</button>,
-                                <button onClick={() => handleDeleteOrder(item.id)}>Delete</button>
-                            ]}
-                        >
-                            <label htmlFor="">Coffee Sữa Tươi...!</label>
-                            <br />
-                            <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
-                        </Card>
+                    {orderCoffeeList.map((item: any) =>
+                        <div key={item.id}>
+                            <Card
+                                style={{ padding: "10px" }}
+                                cover={
+                                    <img
+                                        alt="example"
+                                        src={`/images/${item.image}`}
+                                    />
+                                }
+                                actions={[
+                                    <button>View</button>,
+                                    <button>Edit</button>,
+                                    <button onClick={() => handleDeleteOrder(item.id)}>Delete</button>
+                                ]}
+                            >
+                                <label htmlFor="">Coffee Sữa Tươi...!</label>
+                                <br />
+                                <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
+                            </Card>
+                        </div>
                     )}
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>

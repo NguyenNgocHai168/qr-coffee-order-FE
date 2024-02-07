@@ -12,8 +12,13 @@ export default {
     },
 
     getCoffeeOrder() {
-        const coffeeJson = localStorage.getItem(COFFEE_ORDER_STORAGE_KEY)
-        return coffeeJson !== null ? JSON.parse(coffeeJson) : []
+        let coffeeJson: string | null;
+        let result;
+        if (typeof window !== 'undefined') {
+            coffeeJson = localStorage.getItem(COFFEE_ORDER_STORAGE_KEY);
+            result = coffeeJson !== null ? JSON.parse(coffeeJson) : []
+        }
+        return result
     },
     setCoffeeOrder(order: any) {
         localStorage.setItem(COFFEE_ORDER_STORAGE_KEY, JSON.stringify(order))
