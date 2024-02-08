@@ -48,7 +48,7 @@ const OrderList = () => {
                     <tbody className="align-baseline">
                         {orderCoffeeList.map((orderCoffee: any, index: number) => {
                             return (
-                                <tr key={index + 1} className="group cursor-pointer hover:bg-gray-100">
+                                <tr key={index} className="group cursor-pointer hover:bg-gray-100">
                                     <td
                                         className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
                                     >
@@ -87,8 +87,8 @@ const OrderList = () => {
                 <div className="block sm:hidden">
                     {orderCoffeeList.map((item: any, index: number) => {
                         return (
-                            <div key={index + 1}>
-                                <Card
+                            <div key={index}>
+                                {/* <Card
 
                                     style={{ padding: "10px" }}
                                     cover={
@@ -106,7 +106,7 @@ const OrderList = () => {
                                     <label htmlFor="">Coffee Sữa Tươi...!</label>
                                     <br />
                                     <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
-                                </Card>
+                                </Card> */}
                             </div>
                         )
                     }

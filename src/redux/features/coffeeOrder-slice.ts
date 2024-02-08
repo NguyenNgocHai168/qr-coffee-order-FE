@@ -5,6 +5,7 @@ type OrderCoffee = {
     id: number;
     name: string;
     done: boolean;
+    image: string;
 };
 
 type OrderState = {
