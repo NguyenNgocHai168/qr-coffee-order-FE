@@ -42,64 +42,71 @@ const OrderList = () => {
                             ></th>
                         </tr>
                     </thead>
-                    {/* <tbody className="align-baseline">
-                        {orderCoffeeList.map((orderCoffee: any, index: number) => (
-                            <tr key={index} className="group cursor-pointer hover:bg-gray-100">
-                                <td
-                                    className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
-                                >
-                                    <img style={{ height: "5vh", width: "25%" }} src={`/images/${orderCoffee.image}`} alt="Images Error" />
-                                </td>
-                                <td
-                                    className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
-                                >
-                                    {orderCoffee.title}
-                                </td>
-                                <td
-                                    className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
-                                >
-                                    {orderCoffee.price}
-                                </td>
-                                <td
-                                    className="text-sm p-3 border-t border-grey-light whitespace-no-wrap text-sm group-hover:visible"
-                                >
-                                    <div
-                                    // className="invisible group-hover:visible"
+                    <tbody className="align-baseline">
+                        {orderCoffeeList.map((orderCoffee: any, index: number) => {
+                            return (
+                                <tr key={index} className="group cursor-pointer hover:bg-gray-100">
+                                    <td
+                                        className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
                                     >
-                                        <button className="no-underline text-blue">View</button>
-                                        <span className="text-grey">|</span>
-                                        <button className="no-underline text-blue">Edit</button>
-                                        <span className="text-grey">|</span>
-                                        <button onClick={() => handleDeleteOrder(orderCoffee.id)} className="no-underline text-blue">Delete</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody> */}
+                                        <img style={{ height: "5vh", width: "25%" }} src={`/images/${orderCoffee.image}`} alt="Images Error" />
+                                    </td>
+                                    <td
+                                        className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
+                                    >
+                                        {orderCoffee.title}
+                                    </td>
+                                    <td
+                                        className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
+                                    >
+                                        {orderCoffee.price}
+                                    </td>
+                                    <td
+                                        className="text-sm p-3 border-t border-grey-light whitespace-no-wrap text-sm group-hover:visible"
+                                    >
+                                        <div
+                                        // className="invisible group-hover:visible"
+                                        >
+                                            <button className="no-underline text-blue">View</button>
+                                            <span className="text-grey">|</span>
+                                            <button className="no-underline text-blue">Edit</button>
+                                            <span className="text-grey">|</span>
+                                            <button onClick={() => handleDeleteOrder(orderCoffee.id)} className="no-underline text-blue">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
                 </table>
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any) =>
-                        <Card
-                            key={item.id}
-                            style={{ padding: "10px" }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src={`/images/${item.image}`}
-                                />
-                            }
-                            actions={[
-                                <button>View</button>,
-                                <button>Edit</button>,
-                                <button onClick={() => handleDeleteOrder(item.id)}>Delete</button>
-                            ]}
-                        >
-                            <label htmlFor="">Coffee Sữa Tươi...!</label>
-                            <br />
-                            <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
-                        </Card>
+                    {orderCoffeeList.map((item: any) => {
+                        return (
+                            <div key={item.id}>
+                                <Card
+
+                                    style={{ padding: "10px" }}
+                                    cover={
+                                        <img
+                                            alt="example"
+                                            src={`/images/${item.image}`}
+                                        />
+                                    }
+                                    actions={[
+                                        <button>View</button>,
+                                        <button>Edit</button>,
+                                        <button onClick={() => handleDeleteOrder(item.id)}>Delete</button>
+                                    ]}
+                                >
+                                    <label htmlFor="">Coffee Sữa Tươi...!</label>
+                                    <br />
+                                    <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
+                                </Card>
+                            </div>
+                        )
+                    }
                     )}
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>
