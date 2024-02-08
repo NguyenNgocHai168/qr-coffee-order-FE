@@ -79,7 +79,7 @@ const OrderList = () => {
                 </table>
 
                 {/* ------------------------------------------- */}
-                {/* <div className="block sm:hidden">
+                <div className="block sm:hidden">
                     {orderCoffeeList.map((item: any, index: number) =>
                         <Card
                             key={index}
@@ -104,7 +104,7 @@ const OrderList = () => {
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>
                     </div>
-                </div> */}
+                </div>
 
                 <button type="button" className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Thanh Toán Tiền Mặt</button>
                 <button type="button" className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">VNpay</button>

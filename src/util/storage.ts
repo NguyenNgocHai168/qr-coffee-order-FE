@@ -3,14 +3,16 @@ const COFFEE_ORDER_STORAGE_KEY = 'SAVE_COFFEE_ORDER'
 
 export default {
     get() {
-        const todoJson = localStorage.getItem(SP_CART_STORAGE_KEY)
-        return todoJson !== null ? JSON.parse(todoJson) : []
-        // return JSON.parse(localStorage.getItem(SP_CART_STORAGE_KEY)) || []
+        if (typeof window !== 'undefined') {
+            const todoJson = localStorage.getItem(SP_CART_STORAGE_KEY)
+            return todoJson !== null ? JSON.parse(todoJson) : []
+        }
     },
     set(cart: any) {
         localStorage.setItem(SP_CART_STORAGE_KEY, JSON.stringify(cart))
     },
 
+    // ------------------------------
     getCoffeeOrder() {
         let coffeeJson: string | null;
         let result;
