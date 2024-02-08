@@ -43,8 +43,8 @@ const OrderList = () => {
                         </tr>
                     </thead>
                     <tbody className="align-baseline">
-                        {orderCoffeeList.map((orderCoffee: any) => (
-                            <tr className="group cursor-pointer hover:bg-gray-100" key={orderCoffee.id}>
+                        {orderCoffeeList.map((orderCoffee: any, index: number) => (
+                            <tr key={index} className="group cursor-pointer hover:bg-gray-100">
                                 <td
                                     className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
                                 >
@@ -80,9 +80,9 @@ const OrderList = () => {
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any) =>
+                    {orderCoffeeList.map((item: any, index: number) =>
                         <Card
-                            key={item.id}
+                            key={index}
                             style={{ padding: "10px" }}
                             cover={
                                 <img
