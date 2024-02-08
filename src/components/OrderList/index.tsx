@@ -43,7 +43,7 @@ const OrderList = () => {
                         </tr>
                     </thead>
                     <tbody className="align-baseline">
-                        {orderCoffeeList.map((orderCoffee: any, index: number) => {
+                        {/* {orderCoffeeList.map((orderCoffee: any, index: number) => {
                             return (
                                 <tr key={index} className="group cursor-pointer hover:bg-gray-100">
                                     <td
@@ -76,13 +76,13 @@ const OrderList = () => {
                                     </td>
                                 </tr>
                             )
-                        })}
+                        })} */}
                     </tbody>
                 </table>
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any) => {
+                    {/* {orderCoffeeList.map((item: any) => {
                         return (
                             <div key={item.id}>
                                 <Card
@@ -107,7 +107,7 @@ const OrderList = () => {
                             </div>
                         )
                     }
-                    )}
+                    )} */}
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>
                     </div>
