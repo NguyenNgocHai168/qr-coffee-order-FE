@@ -80,9 +80,9 @@ const OrderList = () => {
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any, index: number) =>
+                    {orderCoffeeList.map((item: any) =>
                         <Card
-                            key={index}
+                            key={item.id}
                             style={{ padding: "10px" }}
                             cover={
                                 <img
