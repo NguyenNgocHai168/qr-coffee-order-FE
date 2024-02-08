@@ -88,8 +88,7 @@ const OrderList = () => {
                     {orderCoffeeList.map((item: any, index: number) => {
                         return (
                             <div key={index}>
-                                {/* <Card
-
+                                <Card
                                     style={{ padding: "10px" }}
                                     cover={
                                         <img
@@ -106,7 +105,7 @@ const OrderList = () => {
                                     <label htmlFor="">Coffee Sữa Tươi...!</label>
                                     <br />
                                     <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
-                                </Card> */}
+                                </Card>
                             </div>
                         )
                     }
