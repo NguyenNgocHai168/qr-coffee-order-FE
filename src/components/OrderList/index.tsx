@@ -87,7 +87,7 @@ const OrderList = () => {
                 <div className="block sm:hidden">
                     {orderCoffeeList.map((orderCoffee: any, index: number) => (
                         <div key={index} className='w-auto'>
-                            <Card
+                            {/* <Card
                                 style={{ padding: "10px" }}
                                 cover={
                                     <img
@@ -102,7 +102,20 @@ const OrderList = () => {
                                 ]}
                             >
                                 <Meta title={`${orderCoffee.title}`} description={<span className='text-red-600'>{orderCoffee.price}</span>} />
-                            </Card>
+                            </Card> */}
+                            <img
+                                alt="example"
+                                src={`/images/${orderCoffee.image}`}
+                            />
+                            <div>
+                                <label htmlFor="">{orderCoffee.title}</label>
+                                <p><span className='text-red-600'>{orderCoffee.price}</span></p>
+                            </div>
+                            <div>
+                                <button type="button" className="bg-green-400">View</button>
+                                <button type="button" className="bg-green-400">Edit</button>
+                                <button type="button" className="bg-green-400" onClick={() => handleDeleteOrder(orderCoffee.id)}>Delete</button>
+                            </div>
                         </div>
                     )
                     )}
