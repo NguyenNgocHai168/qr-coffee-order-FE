@@ -12,7 +12,7 @@ const OrderList = () => {
     const handleDeleteOrder = (id: number) => dispatch(removeOrderCoffee(id))
 
     console.log("check log: ", orderCoffeeList)
-    
+
 
     return (
         <>
@@ -85,30 +85,26 @@ const OrderList = () => {
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {orderCoffeeList.map((item: any, index: number) => {
-                        return (
-                            <div key={index}>
-                                <Card
-                                    style={{ padding: "10px" }}
-                                    cover={
-                                        <img
-                                            alt="example"
-                                            src={`/images/${item.image}`}
-                                        />
-                                    }
-                                    actions={[
-                                        <button>View</button>,
-                                        <button>Edit</button>,
-                                        <button onClick={() => handleDeleteOrder(item.id)}>Delete</button>
-                                    ]}
-                                >
-                                    <label htmlFor="">Coffee Sữa Tươi...!</label>
-                                    <br />
-                                    <p>Giá Bán: <span className="text-red-600">150.000.000 VNĐ</span></p>
-                                </Card>
-                            </div>
-                        )
-                    }
+                    {orderCoffeeList.map((orderCoffee: any, index: number) => (
+                        <div key={index} className='w-auto'>
+                            <Card
+                                style={{ padding: "10px" }}
+                                cover={
+                                    <img
+                                        alt="example"
+                                        src={`/images/${orderCoffee.image}`}
+                                    />
+                                }
+                                actions={[
+                                    <button>View</button>,
+                                    <button>Edit</button>,
+                                    <button onClick={() => handleDeleteOrder(orderCoffee.id)}>Delete</button>
+                                ]}
+                            >
+                                <Meta title={`${orderCoffee.title}`} description={<span className='text-red-600'>{orderCoffee.price}</span>} />
+                            </Card>
+                        </div>
+                    )
                     )}
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>
