@@ -11,6 +11,9 @@ const OrderList = () => {
 
     const handleDeleteOrder = (id: number) => dispatch(removeOrderCoffee(id))
 
+    console.log("check log: ", orderCoffeeList)
+    
+
     return (
         <>
             <div className="max-w-2xl m-auto mt-6">
@@ -43,9 +46,9 @@ const OrderList = () => {
                         </tr>
                     </thead>
                     <tbody className="align-baseline">
-                        {/* {orderCoffeeList.map((orderCoffee: any, index: number) => {
+                        {orderCoffeeList.map((orderCoffee: any, index: number) => {
                             return (
-                                <tr key={index} className="group cursor-pointer hover:bg-gray-100">
+                                <tr key={index + 1} className="group cursor-pointer hover:bg-gray-100">
                                     <td
                                         className="text-sm p-3 border-t border-grey-light whitespace-no-wrap"
                                     >
@@ -76,15 +79,15 @@ const OrderList = () => {
                                     </td>
                                 </tr>
                             )
-                        })} */}
+                        })}
                     </tbody>
                 </table>
 
                 {/* ------------------------------------------- */}
                 <div className="block sm:hidden">
-                    {/* {orderCoffeeList.map((item: any) => {
+                    {orderCoffeeList.map((item: any, index: number) => {
                         return (
-                            <div key={item.id}>
+                            <div key={index + 1}>
                                 <Card
 
                                     style={{ padding: "10px" }}
@@ -107,7 +110,7 @@ const OrderList = () => {
                             </div>
                         )
                     }
-                    )} */}
+                    )}
                     <div className="total-price my-4">
                         <p>Tổng Thành Tiền: <span className="text-grey-200">245.000.000 VNĐ</span></p>
                     </div>
