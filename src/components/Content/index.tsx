@@ -4,17 +4,15 @@ import Footer from "../Footer"
 import Header from "../Header"
 import LayoutAdmin from "../Admin/Layout"
 
-const ContentPage = ({children} : {children: any}) => {
+const ContentPage = ({ children }: { children: any }) => {
     const pathname = usePathname()
     const checkPermission = pathname.includes('admin')
 
     if (checkPermission === true) {
         return (
-            <div className="h-screen" style={{ marginBottom: "100vh" }}>
-                <LayoutAdmin>
-                    {children}
-                </LayoutAdmin>
-            </div>
+            <LayoutAdmin>
+                {children}
+            </LayoutAdmin>
         )
     } else {
         return (
