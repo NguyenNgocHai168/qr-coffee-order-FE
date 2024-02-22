@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <>
             <div className="header-container fixed text-white z-10 right-0 p-6">
-                <Link href="/Order-list">
+                <Link href="/client/order-list">
                     <Badge count={9} offset={[10, 10]}>
                         <CalendarOutlined className='text-4xl bg-amber-500' />
                     </Badge>
@@ -17,7 +17,7 @@ const Header = () => {
                 
             </div>
             <div className="fixed text-white z-10 left-0 p-6">
-                <Link href="/CoffeeHouse-QR">QR Code</Link>
+                <Link href="/client/coffeeHouse-QR">QR Code</Link>
             </div>
             <HeaderBackground />
         </>

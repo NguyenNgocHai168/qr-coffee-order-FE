@@ -4,9 +4,9 @@ import Footer from "../Footer"
 import Header from "../Header"
 import LayoutAdmin from "../Admin/Layout"
 
-const Content = ({children} : {children: any}) => {
+const ContentPage = ({children} : {children: any}) => {
     const pathname = usePathname()
-    const checkPermission = pathname.includes('Admin')
+    const checkPermission = pathname.includes('admin')
 
     if (checkPermission === true) {
         return (
@@ -27,4 +27,4 @@ const Content = ({children} : {children: any}) => {
     }
 }
 
-export default Content
+export default ContentPage
